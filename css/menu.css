@@ -1,0 +1,673 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+
+}
+.InfoText{
+	color: #FFF;
+	text-align: justify;
+
+}
+.Content{
+	width: 90%;
+	text-align: center;
+	margin: 0 auto;	
+}
+.infoText
+/*Настройка скроллбара*/
+::-webkit-scrollbar
+{
+	width: 6px;
+}
+::-webkit-scrollbar-thumb
+{
+	background: linear-gradient(transparent,#30ff00);
+	border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover
+{
+	background: linear-gradient(transparent,#00c6ff);
+}
+
+/*Настройка тела сайта*/
+body{
+	position: absolute;
+	display: block;
+	min-height: 100vh;
+	background: #350048;
+	/*background: #ffd16e;*/
+	width: 100%;
+	justify-content: center; ;  
+	text-align: center;
+	overflow: auto;
+}
+
+
+/*Изменение стиля заголовки*/
+
+h1 
+{
+	margin: 0 auto;
+	width: 3em;
+	text-align: center;
+	font-size: 3em;
+	 text-shadow:
+    1px 1px 1px silver,
+    -1px 1px 1px silver;
+  color: white;
+  transition: .5s;
+}
+
+h1:hover {
+  text-shadow:
+    -5px -5px 5px silver,
+    5px -5px 5px silver;
+  color: white;
+}
+
+/*Изменения Инфо текста сайта*/
+.InfoDiv
+{
+  text-shadow:	1px 1px black,
+    			1px 2px 10px black;
+  color: #333;
+  transition: all 1s;
+}
+
+.InfoDiv:hover {
+  text-shadow:	1px 1px black,
+    			1px 2px 10px tomato;
+  color: crimson;
+}
+
+
+
+/*ВВерхний отступ сайта*/
+.Upper
+{
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+}
+
+/*Горизонтальное меню*/
+.container
+{
+	display: inline-block; 
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.container .btn 
+{
+	display: inline-block;
+	position: relative;
+	width: 155px;
+	height: 50px;
+	float: left;
+	margin: 25px 10px;
+	
+
+}
+.container .btn a
+{
+	position: relative; 
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	background:rgba(255,255,255,0.05);
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
+	color: #fff;
+	z-index: 1;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-decoration: none;
+	overflow: hidden;
+	transition:       0.5s;
+	background-color: rgba(122,122,130,0.2);
+	
+}
+.container .btn:hover a
+{
+	letter-spacing: 5px;
+	cursor: pointer;
+}
+.container .btn a::before
+{ 
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to left, rgba(255, 255, 255, 0.15),transparent);
+	transform: skewX(45deg) translateX(0);
+	transition: 0.5s;
+}
+.container .btn:hover a::before
+{
+	transform: skewX(45deg) translateX(200%);
+}
+.container .btn ::before
+{
+	content: '';
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -5px;
+	width: 30px;
+	height: 10px;
+	background: #f00;
+	border-radius: 10px;
+	transform: 0.5s;
+}
+/*.container .btn :hover::before*/
+/*Карточки мест*/
+.container2
+{
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.container2 .card
+{
+	width: 300px;
+	margin: 10px;
+	padding: 40px 30px;
+	background-color: #350048;
+	border-radius: 40px;
+	box-shadow: -6px -6px 20px rgba(255,255,255,.1),
+				 6px 6px 20px rgba(0,0,0,0.1);
+}
+.container2 .card:hover
+{
+box-shadow: inset -6px -6px 10px rgba(255,255,255,0.1),
+			inset  6px 6px 20px rgba(0,0,0,0.1);	
+}
+
+.container2 .card .imgBox
+{
+	position: relative;
+	text-align: center;
+}
+.container2 .card .imgBox img
+{
+	max-width: 300px;
+}
+.container .card .ContentBox
+{
+	position: relative;
+	margin-top: 20px;
+	text-align: center;
+}
+.container2 .card .ContentBox h2
+{
+	color: #32a3b1;
+	font-weight: 700;
+	font-size: 1.4em;
+	letter-spacing: 2px;
+}
+.container2 .card .ContentBox p
+{
+	color: #32a3b1;
+}
+.container2 .card .ContentBox a
+{
+	display: inline-block;
+	padding: 10px 20px;
+	margin-top: 15px;
+	border-radius: 40px;
+	color: #32a3b1;
+	font-size: 16px;
+	text-decoration: none;
+	box-shadow:  -4px -4px 15px rgba(255,255,255,0.1),
+				  6px 6px 15px rgba(0,0,0,0.1);	
+
+}
+.container2 .card .ContentBox a:hover
+{
+box-shadow: inset -4px -4px 10px rgba(255,255,255,0.1),
+			inset  6px 6px 10px rgba(0,0,0,0.1);	
+}
+.container2 .card a:hover span
+{
+	display: block;
+	transform: scale(0.98);
+}
+ .container2 .card:hover .ImgBox, .container2 .card:hover .ContentBox
+ {
+ 	transform: scale(0.98);
+ }
+
+/*Поисковик*/
+.searchbox
+{
+	position: relative;
+	width: 65px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	margin: 23px;
+}
+.searchbox:hover
+{
+	width: 400px;
+
+}
+.searchbox::before
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 100%;
+	background: linear-gradient(#fff,#fff,#e3e3e3);
+	z-index: 1;
+	filter: blur(1px);
+} 
+.searchbox::after
+{
+	position: absolute;
+	top: 0;
+	right: -10px;
+	width: 100px;
+	height: 100%;
+	background: #9d9d9d;
+	z-index: 1;
+	filter: blur(1px);
+} 
+
+
+.shadow
+{
+	position: absolute;
+	top: 0;
+	left: -50px;
+
+	
+	height: 300px;
+	
+	
+	 
+	pointer-events: none;
+}
+.shadow::before
+{
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: #cfd1e1;
+	z-index: 1;
+}
+
+.searchbox input
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border:none;
+	padding: 10px 25px;
+	outline: none;
+	font-size: 1.1em;
+	color:#555;
+	background: linear-gradient(#dbdae1,#a3aaba);
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.1),
+				15px 15px 15px rgba(0,0,0,0.1),
+				20px 20px 15px rgba(0,0,0,0.1),
+				30px 30px 15px rgba(0,0,0,0.1),
+				inset 1px 1px 2px #fff;
+}
+.searchbox input::placeholder,
+.searchbox input
+{
+	color: transparent;
+}
+.searchbox:hover input::placeholder,
+.searchbox:hover input
+{
+	color:#555;
+}
+ion-icon
+{
+	position: absolute;
+	right: 20px;
+	color:#555;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* social media block*/
+#social 
+{
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 25px;
+	letter-spacing: 4px;
+	padding: 50px 100px;
+	color:#555;
+	text-align: center;
+}
+.social-media
+{
+	display: flex;
+	justify-content: center;
+
+}
+.social-media a
+{
+	display: flex;
+	background: #e3edf7;
+	height: 75px;
+	width: 75px;
+	margin: 0 15px;
+	border-radius: 8px;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+				-6px -6px 10px -1px rgba(255,255,255,0.7);
+	border: 1px solid rgba(0,0,0,0);
+	transition: transform 0.5s; 
+}
+
+.social-media a i
+{
+	font-size: 35px;
+	color: #777;
+	transition: transform 0.5s;
+
+}
+.social-media a:hover
+{
+	box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+				inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+				-0.5px -0.5px 0px rgba(255,255,255,1),
+				0.5px 0.5px 0px rgba(0,0,0,0.15),
+				0px 12px 10px -10px rgba(0,0,0,0.05);
+	border: 1px solid rgba(0,0,0,0.1);
+	transform: translateY(2px);
+}
+
+.social-media a:hover i
+{
+	transform: scale(0.90);
+}
+.social-media a:hover .fa-facebook
+{
+	color: #3b5998;
+}
+.social-media a:hover .fa-whatsapp
+{
+	color: #4fce5d;
+}
+.social-media a:hover .fa-instagram
+{
+	color: #f14843;
+}
+.social-media a:hover .fa-twitter
+{
+	color: #00acee;
+}
+.social-media a:hover .fa-youtube
+{
+	color: #f00;
+}
+.social-media a:hover .fa-telegram
+{
+	color: #0000dd;
+}
+
+
+/*рейтиноговая Шкала*/
+
+#rating1
+{
+	position: absolute;
+	top: 88%;
+	display: flex;
+	transform: rotateY(180deg);
+
+}
+#rating1 input
+{
+	display: none;
+}
+#rating1 label
+{
+	display: block;
+	cursor: pointer;
+	width: 50px;
+}
+#rating1 label:before
+{
+	content: '\f005';
+	font-family: fontAwesome;
+	position: absolute;
+	display: block;
+	font-size: 20px;
+	color: #101010;
+}
+#rating1 label:after
+{
+	content: '\f005';
+	font-family: fontAwesome;
+	position: absolute;
+	display: block;
+	font-size: 20px;
+	color: #1f9cff;
+	top: 0;
+	opacity: 0;
+	transform: .5s;
+	text-shadow: 0 2px 5px rgba(0,0,0,.5);
+
+}
+#rating1 label:hover:after,
+#rating1 label:hover ~ label:after,
+#rating1 input:checked ~ label:after
+{
+	opacity: 1;
+}
+
+#rating2
+{
+	position: absolute;
+	top: 88%;
+	display: flex;
+	transform: rotateY(180deg);
+
+}
+#rating2 input
+{
+	display: none;
+}
+#rating2 label
+{
+	display: block;
+	cursor: pointer;
+	width: 50px;
+}
+#rating2 label:before
+{
+	content: '\f005';
+	font-family: fontAwesome;
+	position: absolute;
+	display: block;
+	font-size: 20px;
+	color: #101010;
+}
+#rating2 label:after
+{
+	content: '\f005';
+	font-family: fontAwesome;
+	position: absolute;
+	display: block;
+	font-size: 20px;
+	color: #1f9cff;
+	top: 0;
+	opacity: 0;
+	transform: .5s;
+	text-shadow: 0 2px 5px rgba(0,0,0,.5);
+
+}
+#rating2 label:hover:after,
+#rating2 label:hover ~ label:after,
+#rating2 input:checked ~ label:after
+{
+	opacity: 1;
+}
+
+#rating3
+{
+	position: absolute;
+	top: 88%;
+	display: flex;
+	transform: rotateY(180deg);
+
+}
+#rating3 input
+{
+	display: none;
+}
+#rating3 label
+{
+	display: block;
+	cursor: pointer;
+	width: 50px;
+}
+#rating3 label:before
+{
+	content: '\f005';
+	font-family: fontAwesome;
+	position: absolute;
+	display: block;
+	font-size: 20px;
+	color: #101010;
+}
+#rating3 label:after
+{
+	content: '\f005';
+	font-family: fontAwesome;
+	position: absolute;
+	display: block;
+	font-size: 20px;
+	color: #1f9cff;
+	top: 0;
+	opacity: 0;
+	transform: .5s;
+	text-shadow: 0 2px 5px rgba(0,0,0,.5);
+
+}
+#rating3 label:hover:after,
+#rating3 label:hover ~ label:after,
+#rating3 input:checked ~ label:after
+{
+	opacity: 1;
+}
+
+#rating4
+{
+	position: absolute;
+	top: 88%;
+	display: flex;
+	transform: rotateY(180deg);
+
+}
+#rating4 input
+{
+	display: none;
+}
+#rating4 label
+{
+	display: block;
+	cursor: pointer;
+	width: 50px;
+}
+#rating4 label:before
+{
+	content: '\f005';
+	font-family: fontAwesome;
+	position: absolute;
+	display: block;
+	font-size: 20px;
+	color: #101010;
+}
+#rating4 label:after
+{
+	content: '\f005';
+	font-family: fontAwesome;
+	position: absolute;
+	display: block;
+	font-size: 20px;
+	color: #1f9cff;
+	top: 0;
+	opacity: 0;
+	transform: .5s;
+	text-shadow: 0 2px 5px rgba(0,0,0,.5);
+
+}
+#rating4 label:hover:after,
+#rating4 label:hover ~ label:after,
+#rating4 input:checked ~ label:after
+{
+	opacity: 1;
+}
+
+
+ /*Создание социального блока*/
+#social 
+{
+  	text-shadow:	-1px -1px #000,
+    				0 1px 0 #444;
+  color: #222;
+  transition: all .5s;
+}
+
+#social:hover 
+{	
+	text-shadow:	-1px -1px #000,
+    				0 1px 0 #444;
+  	color: #1A1A1A;
+}
+
+
+
+  /* Нижний блок*/
+
+
+.Down
+{
+	 width: 100%;
+	 height: 200px;
+}
+
+
+
+
+

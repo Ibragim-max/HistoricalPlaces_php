@@ -1,3 +1,6 @@
+<?php 
+    $query = 'SELECT name_place AS `name`, SUBSTR(text_place, 1, 75) AS `text`, poster FROM places LIMIT 6';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,7 +111,9 @@
     </h1>
 
     <div class="box-container">
-
+        <?php 
+            require_once
+        ?>
         <div class="box">
             <img src="images/p-1.jpg" alt="">
             <div class="content">

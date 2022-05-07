@@ -4,10 +4,10 @@
     	foreach($datas as $data): ?>
 			
 			<div class="box">
-	            <img src="<?php echo $data[3] ?>" alt="">
+	            <img src="/<?php echo $data[2] ?>" alt="">
 	            <div class="content">
-	                <h3> <i class="fas fa-map-marker-alt"></i> <?php echo $data[1] ?></h3>
-	                <p><?php echo $data[2] ?> ...</p>
+	                <h3> <i class="fas fa-map-marker-alt"></i> <?php echo $data[0] ?></h3>
+	                <p><?php echo $data[1] ?> ...</p>
 	                <div class="stars">
 	                    <i class="fas fa-star"></i>
 	                    <i class="fas fa-star"></i>

@@ -1,8 +1,5 @@
-<?php 
-    $query = 'SELECT name_place AS `name`, SUBSTR(text_place, 1, 75) AS `text`, poster FROM places LIMIT 6';
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -111,104 +108,12 @@
     </h1>
 
     <div class="box-container">
+
         <?php 
-            require_once
+            require_once 'funcs.php';
+            $db = @mysqli_connect('localhost', 'root', 'root', 'hist_town') or die('ошибка соединение с БД');
+            PlacesOut(SelectDatas($db, 'SELECT name_place AS `name`, SUBSTR(text_place, 1, 70) AS `text`, poster FROM places LIMIT 6'));
         ?>
-        <div class="box">
-            <img src="images/p-1.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> mumbai </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <a href="#" class="btn">Читать больше...</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/p-2.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> hawaii </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <a href="#" class="btn">Читать больше...</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/p-3.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> sydney </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <a href="#" class="btn">Читать больше...</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/p-4.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> paris </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <a href="#" class="btn">Читать больше...</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/p-5.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> tokyo </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <a href="#" class="btn">Читать больше...</a>
-            </div>
-        </div>
-
-        <div class="box">
-            <img src="images/p-6.jpg" alt="">
-            <div class="content">
-                <h3> <i class="fas fa-map-marker-alt"></i> eypt </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <a href="#" class="btn">Читать больше...</a>
-            </div>
-        </div>
 
     </div>
 

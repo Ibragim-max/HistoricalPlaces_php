@@ -121,94 +121,30 @@
 
 <!-- конец блока популярных -->
 
+
 <!-- services section starts  -->
 
 
 <section class="gallery" id="gallery">
 
     <h1 class="heading">
+
         <span>Г</span>
         <span>О</span>
         <span>Р</span>
         <span>О</span>
         <span>Д</span>
         <span>А</span>
+
     </h1>
 
     <div class="box-container">
 
-        <div class="box">
-            <img src="images/g-1.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-2.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-3.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-4.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-5.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-6.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-7.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-8.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
-        <div class="box">
-            <img src="images/g-9.jpg" alt="">
-            <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
-            </div>
-        </div>
+        <?php 
+            require_once 'funcs.php';
+            $db = @mysqli_connect('localhost', 'root', 'root', 'hist_town') or die('ошибка соединение с БД');
+            PlacesOutAll(SelectDatas($db, 'SELECT name_place AS `name`, SUBSTR(text_place, 1, 60) AS `text`, poster FROM places'));
+        ?>
 
     </div>
 
@@ -221,12 +157,14 @@
 <section class="review" id="review">
 
     <h1 class="heading">
+
         <span>А</span>
         <span>Д</span>
         <span>М</span>
         <span>И</span>
         <span>Н</span>
         <span>Ы</span>
+
     </h1>
 
     <div class="swiper-container review-slider">
@@ -298,16 +236,20 @@
 
 <!-- review section ends -->
 
+
+
 <!-- contact section starts  -->
 
 <section class="contact" id="contact">
     
     <h1 class="heading">
+
         <span>с</span>
         <span>в</span>
         <span>я</span>
         <span>з</span>
         <span>ь</span>
+
     </h1>
 
     <div class="row">
@@ -334,6 +276,8 @@
 </section>
 
 <!-- contact section ends -->
+
+
 
 <!-- footer section  -->
 
@@ -366,18 +310,6 @@
     <h1 class="credit"> Создано <span> Мр. Ибрагим и Сэр Азимчон  </span> | all rights reserved! </h1>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

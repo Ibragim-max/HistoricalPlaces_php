@@ -112,7 +112,7 @@
         <?php 
             require_once 'funcs.php';
             $db = @mysqli_connect('localhost', 'root', 'root', 'hist_town') or die('ошибка соединение с БД');
-            PlacesOut(SelectDatas($db, 'SELECT name_place AS `name`, SUBSTR(text_place, 1, 70) AS `text`, poster FROM places LIMIT 6'));
+            PlacesOut(SelectDatas($db, 'SELECT name_place AS `name`, SUBSTR(text_place, 1, 70) AS `text`, poster, id_place FROM places LIMIT 6'));
         ?>
 
     </div>
@@ -143,7 +143,7 @@
         <?php 
             require_once 'funcs.php';
             $db = @mysqli_connect('localhost', 'root', 'root', 'hist_town') or die('ошибка соединение с БД');
-            PlacesOutAll(SelectDatas($db, 'SELECT name_place AS `name`, SUBSTR(text_place, 1, 60) AS `text`, poster FROM places'));
+            PlacesOutAll(SelectDatas($db, 'SELECT name_place AS `name`, SUBSTR(text_place, 1, 60) AS `text`, poster, id_place FROM places'));
         ?>
 
     </div>

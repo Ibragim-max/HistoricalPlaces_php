@@ -15,7 +15,7 @@
 	                    <i class="fas fa-star"></i>
 	                    <i class="far fa-star"></i>
 	                </div>
-	                <a href="#" class="btn">Читать больше...</a>
+	                <a <?php echo 'href="town.php?town_id=' . $data[3] . '"'; ?> class="btn">Читать больше...</a>
 	            </div>
 	        </div>
 
@@ -31,7 +31,7 @@
             	<div class="content">
 	                <h3> <?php echo $data[0] ?> </h3>
 	                <p> <?php echo $data[1] ?> ... </p>
-	                <a href="#" class="btn">see more</a>
+	                <a <?php echo 'href="town.php?town_id=' . $data[3] . '"'; ?> class="btn">see more</a>
             	</div>
         	</div>
 
@@ -44,4 +44,3 @@
 		$res = mysqli_query($db, $query);
 		return mysqli_fetch_all($res); 
     }
-?>

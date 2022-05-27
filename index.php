@@ -60,7 +60,7 @@
         <input type="checkbox" id="remember">
         <label for="remember">Запомнить меня</label>
         <p>Запомнить меня? <a href="#">Кликнуть сюда</a></p>
-        <p>Еще не регистрированы? <a href="#">Регистрация</a></p>
+        <p>Еще не регистрированы? <a href="/registration list/registr.html">Регистрация</a></p>
     </form>
 
 </div>
@@ -242,7 +242,7 @@
 
 <section class="contact" id="contact">
     
-    <h1 class="heading">
+    <h2 class="heading">
 
         <span>с</span>
         <span>в</span>
@@ -250,7 +250,7 @@
         <span>з</span>
         <span>ь</span>
 
-    </h1>
+    </h2>
 
     <div class="row">
 

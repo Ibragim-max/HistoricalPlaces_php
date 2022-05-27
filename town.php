@@ -106,12 +106,12 @@
 
     
     <div class="town-name">
-	    <h1><span>sssss</span></h1>
+	    <h1><span><?php  echo $TownInfo[0][0]; ?></span></h1>
 	    <!-- echo "<h1>{$TownInfo[0][0]}</h1>"   загаловок -->
 	</div>
 	
 	<div class="town-img">
-		<img class="pict" src="images/1.png">
+		<img class="pict" src=<?php echo '"' . $TownInfo[0][1] . '"'; ?>>
 		    <!-- echo "<img src=\"{$TownInfo[0][1]}\"/>"; //ссылка картинок -->
 
 	</div>
@@ -119,12 +119,7 @@
 	<div class="town-text">
 		<p class="title">
 			<span>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<?php echo $TownInfo[0][2]; ?>
 			</span>
 		</p>   
 	    <!-- echo "<p>{$TownInfo[0][2]}</p>"; //текст ссылка -->
